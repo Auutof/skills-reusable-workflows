@@ -13,6 +13,7 @@ jobs:
     uses: ./.github/workflows/reusable-node-quality.yml
     with:
       node-version: 24
+
   github-pages:
     name: Deploy to GitHub Pages
     needs: quality
@@ -23,6 +24,7 @@ jobs:
       contents: read
       pages: write
       id-token: write
+
   comment:
     name: Comment on PR
     if: always()
@@ -40,4 +42,4 @@ jobs:
             | --- | --- |
             | 🌐 GitHub Pages URL | ${{ needs.github-pages.outputs.page_url }} |
             | 🧾 Workflow logs | https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }} |
-
+            

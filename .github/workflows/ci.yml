@@ -40,3 +40,4 @@ jobs:
             | --- | --- |
             | 🌐 GitHub Pages URL | ${{ needs.github-pages.outputs.page_url }} |
             | 🧾 Workflow logs | https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }} |
+
